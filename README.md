@@ -10,4 +10,4 @@ Cotton is an important crop with a significant role in the global economy, but i
   
 ![image](https://github.com/kunjankanani/Cotton_Plant_Disease_Detection/assets/115248453/f7df5d67-12c4-4540-a8c2-bb2ea835be5c)
 
-</div>div>
+</div>
