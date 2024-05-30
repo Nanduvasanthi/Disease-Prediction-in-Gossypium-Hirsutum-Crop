@@ -19,3 +19,49 @@ Cotton is an important crop with a significant role in the global economy, but i
 
 </div>
 
+Let's dive into a detailed explanation of the flowchart :
+
+1. **Image Acquisition**:
+   - This initial step involves capturing images, likely of plants or crops, using cameras or other sensors. These images serve as the input for disease prediction.
+
+2. **Image Enhancement**:
+   - After acquiring the images, enhancement techniques are applied. These could include adjusting brightness, contrast, and removing noise to improve the quality of the images.
+   - Enhanced images are crucial for accurate disease detection.
+
+3. **Image Preprocessing**:
+   - In this step, further processing occurs. Common preprocessing steps include resizing, cropping, and normalization.
+   - These prepare the images for subsequent analysis by removing irrelevant information and standardizing their format.
+
+4. **Test Annotation**:
+   - Annotation involves labeling specific regions of interest within the images. For disease prediction, these annotations might indicate the presence of symptoms or affected areas on the plants.
+   - Annotations provide ground truth labels for training machine learning models.
+
+5. **Data Splitting**:
+   - The flowchart splits into two paths:
+     - **Training Set**: A portion of the annotated images is used for training machine learning models. These models learn patterns from the labeled data.
+     - **Test Set**: The remaining images form the test set. They are used to evaluate the model's performance.
+
+6. **Image Augmentation**:
+   - The "Augmented Dataset" section suggests that additional data is generated through image augmentation techniques. These techniques create variations of existing images (e.g., rotations, flips, brightness adjustments).
+   - Augmentation helps improve model robustness by exposing it to diverse examples.
+
+7. **Model Training**:
+   - Using the training set, a machine learning model (such as a neural network) is trained. The model learns to recognize disease patterns based on the annotated images.
+   - The "Models" section lists various diseases, including:
+     - **Army Worm**
+     - **Bacterial Blight**
+     - **Cotton Boll Rot**
+     - **Green Cotton Boll**
+     - **Healthy** (presumably indicating healthy plants)
+     - **Powdery Mildew**
+     - **Target Spot**
+   - Each disease has an associated color-coded box.
+
+8. **Disease Prediction**:
+   - The trained model is used to predict whether an unseen image contains a disease or not.
+   - If the prediction is positive (i.e., disease present), the flowchart loops back to the beginning of the iterative process.
+   - If the prediction is negative (i.e., no disease), it moves forward.
+
+9. **Applying the Model**:
+   - The arrow pointing from the "Models" section to the "Test Image" box suggests that this is where the trained model would be applied to make predictions on new, unseen data.
+
