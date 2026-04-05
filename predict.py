@@ -11,7 +11,7 @@ IMG_SIZE = 224
 MODEL_PATH = "efficientnet_cotton_disease.keras"
 
 # Adjustable thresholds for non-cotton detection
-CONFIDENCE_THRESHOLD = 90  # Minimum confidence (%) to consider it a valid cotton leaf
+CONFIDENCE_THRESHOLD = 80  # Minimum confidence (%) to consider it a valid cotton leaf
 GREEN_RATIO_THRESHOLD = 0.12  # Reduced slightly to catch more varied leaf images
 EDGE_DENSITY_THRESHOLD = 0.015  # Slightly reduced for more sensitivity
 TEXTURE_VARIANCE_THRESHOLD = 0.5  # Minimum texture variance for leaf-like patterns
@@ -357,7 +357,7 @@ def predict_image(image):
         
         if adjusted_confidence < CONFIDENCE_THRESHOLD:
             print(f"❌ Rejecting: Adjusted confidence below threshold")
-            return "Not a Cotton Leaf", adjusted_confidence, None, None
+            return "Not a Cotton Leaf", adjusted_confidence, heatmap, overlayed
     else:
         adjusted_confidence = confidence
     
