@@ -18,6 +18,7 @@
 - [Chatbot Architecture](#-chatbot-architecture)
 - [Configuration](#-configuration)
 - [Testing the Prediction Pipeline](#-testing-the-prediction-pipeline)
+- [Dataset](#-dataset)
 - [Team](#-team)
 
 ---
@@ -182,11 +183,10 @@ scipy
 
 ### 4. Set up your Gemini API Key
 
-The chatbot uses Google's Gemini API. Replace the placeholder key in `chatbot.py`:
+The chatbot uses Google's Gemini API. Create a `.env` file based on the `env.example` and replace `YOUR_GEMINI_API_KEY_HERE` with your actual key:
 
-```python
-# .env
-Create a .env file based on the env.example replace "YOUR_GEMINI_API_KEY_HERE" with your API key
+```
+GEMINI_API_KEY=YOUR_GEMINI_API_KEY_HERE
 ```
 
 > Get a free API key at [https://aistudio.google.com/app/apikey](https://aistudio.google.com/app/apikey)
@@ -276,11 +276,11 @@ The local knowledge base (`disease_knowledge.py`) covers all 8 disease classes w
 Key thresholds in `predict.py` can be tuned to adjust sensitivity:
 
 ```python
-CONFIDENCE_THRESHOLD    = 80    # Min model confidence (%) to accept prediction
-GREEN_RATIO_THRESHOLD   = 0.12  # Min green pixel ratio for leaf detection
-EDGE_DENSITY_THRESHOLD  = 0.015 # Min edge density within green region
-TEXTURE_VARIANCE_THRESHOLD = 0.5  # Min Sobel gradient variance
-COLOR_VARIANCE_THRESHOLD   = 0.05 # Min LAB color channel variance
+CONFIDENCE_THRESHOLD       = 80    # Min model confidence (%) to accept prediction
+GREEN_RATIO_THRESHOLD      = 0.12  # Min green pixel ratio for leaf detection
+EDGE_DENSITY_THRESHOLD     = 0.015 # Min edge density within green region
+TEXTURE_VARIANCE_THRESHOLD = 0.5   # Min Sobel gradient variance
+COLOR_VARIANCE_THRESHOLD   = 0.05  # Min LAB color channel variance
 ```
 
 ---
@@ -301,18 +301,33 @@ This will print:
 
 ---
 
+## 📂 Dataset
+
+This project was trained on the **Customized Cotton Disease Dataset** published on Kaggle by [saeedazfar](https://www.kaggle.com/saeedazfar).
+
+> 📎 **Dataset:** [Customized Cotton Disease Dataset](https://www.kaggle.com/datasets/saeedazfar/customized-cotton-disease-dataset)  
+> 👤 **Author:** saeedazfar  
+> 📅 **Published:** September 2023  
+> 🌐 **Source:** Kaggle
+
+The dataset covers cotton pests, leaf diseases, and boll conditions across the 8 classes used in this project. We are grateful to the dataset author for making this resource publicly available, which made the training of our models possible.
+
+If you use this dataset in your own work, please credit the original author and link back to the Kaggle dataset page above.
+
+---
+
 ## 👥 Team
 
 Developed as a final year B.Tech project at **Vasireddy Venkatadri Institute of Technology (VVIT)**, Guntur, Andhra Pradesh.
 
 | Name | Roll Number |
 |---|---|
-| [Student Name 1] | [Roll No] |
-| [Student Name 2] | [Roll No] |
-| [Student Name 3] | [Roll No] |
-| [Student Name 4] | [Roll No] |
+| [M Darshini Sai] | [22BQ1A05D2] |
+| [M Nandu Vasanthi] | [22BQ1A05E0] |
+| [M YamunaBai] | [22BQ1A05E5] |
+| [N D Sandeep] | [22BQ1A05F0] |
 
-**Guide:** [Guide Name], Professor, Department of CSE, VVIT
+**Guide:** Dr. N. Sri Hari, Professor, Department of CSE, VVIT
 
 ---
 
