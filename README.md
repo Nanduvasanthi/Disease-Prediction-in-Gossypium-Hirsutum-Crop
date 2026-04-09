@@ -322,10 +322,10 @@ Developed as a final year B.Tech project at **Vasireddy Venkatadri Institute of 
 
 | Name | Roll Number |
 |---|---|
-| [M Darshini Sai] | [22BQ1A05D2] |
-| [M Nandu Vasanthi] | [22BQ1A05E0] |
-| [M YamunaBai] | [22BQ1A05E5] |
-| [N D Sandeep] | [22BQ1A05F0] |
+| M Darshini Sai | 22BQ1A05D2 |
+| M Nandu Vasanthi | 22BQ1A05E0 |
+| M YamunaBai | 22BQ1A05E5 |
+| N D Sandeep | 22BQ1A05F0 |
 
 **Guide:** Dr. N. Sri Hari, Professor, Department of CSE, VVIT
 
